@@ -1,0 +1,51 @@
+General Process
+Raw Data --(Clean)--> Tidy Data --(Analysis)--> Useful Data
+
+4 Things you should have:
+1. Raw Data
+2. Tidy Data
+3. Code book
+	Index + description of variables and units
+	study design and how the data was collected
+4. Explicit instructions 
+	re: how 1 became 2, 3 
+	[R/Python Script]
+	No parameters in script
+
+
+Getting and setting working directory:
+Should be in the script
+setwd() and getwd() commands
+can be relative or absolute
+
+sedwd("./data") 
+"../" [move up one directory] as well is possible
+abolute file paths as well
+note that in windows
+to get the a single backslash -> double backslash is required
+
+ex. setwd("C:\\Users\\...")
+
+file.exists("directoryName") -> boolean
+checks to see if directory exists [files as well?]
+dir.create("directoryName") -> create a directory if it does not exist
+
+ex: if(!file.exists("data")){
+	dir.create("data")
+}
+
+download.file()
+params: url, destfile, method
+
+read.table()
+params: file, header, sep, row.names, nrows
+
+Notes regarding excel file [xlsx library]
+write.xlsx outputs excel file from R
+read.xlsx2 much faster than read.xlsx [but can be unstable]
+XLConnect is better if much heavier work in Excel file format -
+for ease of use though save as csv or .tab/.txt due to proprietary constraints
+
+Data Table
+Inherits from Dataframe
+-> native C implementation so much faster
