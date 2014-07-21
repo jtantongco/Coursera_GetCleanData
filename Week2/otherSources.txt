@@ -1,0 +1,34 @@
+Other Data Sources:
+
+Interacting with files
+file - text 
+url - url
+gzfile - .gz
+bzfile - .bz2
+?connections for more info
+
+Foreign package
+read.<format>
+-read.arff (Weka)
+-read.dta (Stata)
+-read.mtp (Minitab)
+-read.octave (Octave)
+-read.spss (SPSS)
+-read.xport (SAS)
+
+See lecture slides on other sources for list of links for DB packages
+
+reading images
+jpeg
+readbitmap
+png
+EBImage
+
+read GIS data *!!!*
+rdgal
+rgeos
+raster
+
+read music data
+tuneR
+seewave
