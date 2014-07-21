@@ -1,3 +1,5 @@
+library(XML)
+
 fileUrl <- "http://espn.go.com/nfl/team/_/name/bal/baltimore-ravens"
 doc <- htmlTreeParse(fileUrl, useInternal=TRUE)
 
