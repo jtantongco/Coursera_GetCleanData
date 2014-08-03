@@ -1,0 +1,80 @@
+# regulars
+# literals and metacharacters
+# literals -> actual letters of the alphabet
+# metacharacters -> multiplicity descriptors
+# by default in R, R does not consider anything outside the specified regex
+
+# open ended regex 
+# start of sentence must be "i think..."
+^i think
+
+# close ended regex
+# end of sentence must be "...morning"
+$morning
+
+#single occurence upper or lower case
+# any permutation of upper/lower case word bush
+[Bb][Uu][Ss][Hh]
+
+#"I am..." or "i am..."
+^[Ii] am
+
+#Start with any number then any upper or lower case letter
+^[0-9][a-zA-Z]
+
+#^ is overloaded
+#^: in this case: negation
+# Any sentence NOT ending in period or question mark
+[^?.]$
+    
+#. is overloaded
+#. - in this case - wildcard
+# Any 9 separated by anything then an 11    
+9.11
+
+# | logical or
+#arbitrary # of ors can be made
+#Any sentence or with flood or fire
+flood|fire
+flood|earthquake|hurricane|coldfire
+
+#Any sentence starting with good or any sentence containing bad
+^[Gg]ood|[Bb]ad
+#Any sentence starting with good or bad
+^([Gg]ood|[Bb]ad)
+
+#? is overloaded
+#?: in this case: optional
+# George Bush (with cap variants) or George W. Bush (with cap variants)
+[Gg]eorge( [Ww]\.)? [Bb]ush
+
+#Note for overloarded character
+# \ forces literal evaluation
+# ie \. matches .
+
+#multiplicity
+(.*) # senetence with any character 0-infinity times 
+(.+) # senetence with any character 1-infinity times 
+[0-9]+ (.*)[0-9]+ # any decimal number with a decimal point
+    
+# explicit numerical multiplicity
+#{min, max} : at least min times, and at most max times
+#{num} : exactly num times
+#{num,} : at least num times
+#Bush must appear once to 5 times  
+#Bush must be separated from other Bush words
+[Bb]ush( +[^ ]+ +){1,5} 
+
+# \# can be used to bind previous blocks in ()
+# in the below, \1 binds to ([a-zA-Z]+)
+# semantically two "words" must repeat one after the other
++([a-zA-Z]+) +\1 +
+    
+#semantically, sentence that starts and ends in s    
+#the below forces a start in s but the second s can be anywhere
+^s(.*)s
+
+#forces the end of a sentence to be a s at the end
+^s(.*?)s$
+    
+# can be used in grep, grepl, sub, gsub

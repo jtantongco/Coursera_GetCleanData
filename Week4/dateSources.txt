@@ -1,0 +1,19 @@
+see slides for list
+index of data sites - http://www.data.gov/opendatasites
+USA - http://www.data.gov/ 
+list of what is available in the states
+http://simplystatistics.org/2012/01/02/list-of-cities-states-with-open-data-help-me-find/
+
+gapminder.org -> health data
+asdfree.com -> US surveys
+infochimps.com/marketplace -> geographic / business [not all free]
+kaggle.com
+
+Data from Amazon - http://aws.amazon.com/publicdatasets/
+
+APIs
+google maps - RGoogleMaps
+facebook - RFacebook
+twitter - RTwitter
+
+rOpenSci -> various academic datasets
