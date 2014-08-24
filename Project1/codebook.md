@@ -29,6 +29,9 @@ They contain various measurements taken from onboard sensors on a Samsung phone.
 To see more details on the original dataset, please refer to the following link:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
+The original data set can be downloaded here:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
 ## Transformations:
 
 The following were done to go from the raw data set to the current tidy aggregate data:
